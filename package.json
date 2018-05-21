@@ -25,6 +25,7 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^3.3.0",
+    "gulp-inject-string": "^1.1.1",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-inline": "^1.0.0",
     "gulp-notify": "^3.0.0",

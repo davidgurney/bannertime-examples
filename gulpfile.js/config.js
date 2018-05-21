@@ -4,6 +4,8 @@ var src = './src';
 var dest = './public';
 
 module.exports = {
+  'remotePath': 'https://s3.amazonaws.com/foobar/',
+
   'root': {
     'src': src,
     'dest': dest
