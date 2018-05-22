@@ -14,6 +14,9 @@ Banner.prototype.start = function () {
     'images/logo.png'
   ];
 
+  this.balloonUrl = this.dynamicContent.My_GoogleSheet_Feed[0].image1.Url;
+  this.images.push(this.balloonUrl);
+
   var _this = this;
   this.preloadImages(this.images, function () {
     _this.createElements();
@@ -33,14 +36,25 @@ Banner.prototype.createElements = function () {
     retina: true,
     parent: this.banner
   });
+
+  this.balloon = this.smartObject({
+    backgroundImage: this.balloonUrl,
+    parent: this.banner
+  });
+
+  this.copy1 = this.smartObject({
+    color: '#000',
+    top: 'none',
+    bottom: 0,
+    parent: this.banner
+  });
 };
 
 /**
  * Setup initial element states.
  */
 Banner.prototype.setup = function () {
-  this.logo.center();
-  this.logo.set({ autoAlpha: 0, scale: 0.4 });
+  this.copy1.innerHTML = this.dynamicContent.My_GoogleSheet_Feed[0].copy1;
 };
 
 /**
@@ -54,14 +68,5 @@ Banner.prototype.hidePreloader = function () {
  * Animation timeline.
  */
 Banner.prototype.animate = function () {
-  var _this = this;
 
-  function loop() {
-    _this.timeline.gotoAndPlay('start');
-  }
-
-  this.timeline = new TimelineLite({ onComplete: loop })
-    .addLabel('start', 0)
-    .add(TweenLite.to(this.logo, 2, { autoAlpha: 1, scale: 0.7, delay: 1, ease: Elastic.easeOut }))
-    .add(TweenLite.to(this.logo, 1, { autoAlpha: 0, scale: 0.4, delay: 1 }));
 };

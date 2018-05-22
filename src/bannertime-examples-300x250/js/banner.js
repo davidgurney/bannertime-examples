@@ -20,12 +20,9 @@ Banner.prototype.onVisible = function () {
   var _this = this;
 
   this.politeLoad([
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineLite.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js'
+    'https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.20.0_d360d9a082ccc13b1a1a9b153f86b378_min.js'
   ], function () {
-    _this.start();
+    _this.loadDynamicData();
   });
 };
 
