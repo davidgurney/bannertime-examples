@@ -4,7 +4,7 @@
   "description": "A collection of useful scripts and banners",
   "repository": {
     "type": "git",
-    "url": "git remote add origin git@github.com:bannertime/bannertime-examples.git"
+    "url": "git remote add origin git@github.com:davidgurney/bannertime-examples.git"
   },
   "scripts": {
     "build": "npm install && gulp prod",
